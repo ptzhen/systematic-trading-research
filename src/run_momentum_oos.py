@@ -1,4 +1,15 @@
-"""Frozen 2025 evaluation. No optimization, resampling or future data wrapping."""
+"""
+Run the frozen 2025 out-of-sample evaluation.
+
+The strategy specification is kept unchanged from the development period.
+This script evaluates the frozen strategy on previously unseen 2025 data,
+produces strategy diagnostics, and replays selected risk-constraint scenarios.
+
+Important:
+- 2025 is treated as a one-time holdout.
+- No strategy parameters are optimised using 2025 results.
+- Historical performance is not evidence of future profitability.
+"""
 from pathlib import Path
 from datetime import datetime, timezone
 import hashlib
